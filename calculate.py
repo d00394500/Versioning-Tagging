@@ -10,6 +10,9 @@ def calculate(operation, a, b):
             return "Error"
         else:
             return a / b
+    elif operation == 'power':
+        return a ** b
+    
     else:
         return "Error: Unsupported operation"
 
@@ -20,3 +23,4 @@ if __name__ == "__main__":
     print(calculate('multiply', 5, 3))   # Output: 15
     print(calculate('divide', 5, 3))     # Output: 1.666...
     print(calculate('divide', 5, 0))     # Error
+    print(calculate('power', 5, 2))      # Output: 25
