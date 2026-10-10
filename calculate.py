@@ -1,17 +1,18 @@
 def calculate(operation, a, b):
-    if operation == 'add':
+    if operation == '+':
         return str(a + b)
-    elif operation == 'subtract':
+    elif operation == '-':
         return str(a - b)
-    elif operation == 'multiply':
+    elif operation == '*':
         return str(a * b)
-    elif operation == 'divide':
+    elif operation == '/':
         if b == 0:
             return "Error"
         else:
             return str(a / b)
     elif operation == 'power':
         return str(a ** b)
+
     
     else:
         return "Error: Unsupported operation"
