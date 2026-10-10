@@ -1,6 +1,16 @@
 results_log = []
 
 def calculate( operation, a, b):
+
+    if a == 'ans' and results_log:
+        last_val = results_log[-1]
+        a = float(last_val) if '.' in last_val else int(last_val)
+        
+    if b == 'ans' and results_log:
+        last_val = results_log[-1]
+        b = float(last_val) if '.' in last_val else int(last_val)
+
+
     if operation == '+':
         res = str(a + b)
     elif operation == '-':
@@ -28,5 +38,7 @@ if __name__ == "__main__":
     print(calculate('/', 5, 3))     # Output: 1.666...
     print(calculate('/', 5, 0))     # Error
     print(calculate('**', 5, 2))      # Output: 25
+    print(calculate('*', 'ans', 2))    # Output: 50 
+    print(calculate('-', 'ans', 6))    # Output: 44
 
     print("Log of results:", results_log)
